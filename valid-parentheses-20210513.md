@@ -46,31 +46,27 @@
 
 代码
 ```TypeScript
-let map: any = {
-    '{' : '}',
-    '(' : ')',
-    '[' : ']'
+let map:{[key:string]:string}={
+    '{':'}',
+    '(':')',
+    '[':']'
 }
-
 function isValid(s: string): boolean {
-
-    let stack: string[] = [];
-    let top: string | undefined;
-
+    let stack:string[]=[];
+    let top:string | undefined;
     for(let char of s){
         let value;
-        if((value = map[char])){
+        if((value=map[char])){
             stack.push(value);
         }else{
-            top = stack.pop();
-            if(top !== char){
+            top=stack.pop();
+            if(top!==char){
                 return false;
             }
         }
     }
-
-    return !stack.length;
-}
+  return !stack.length;
+};
 ```
 作者：li-li-h4
 链接：https://leetcode-cn.com/problems/valid-parentheses/solution/zui-kuai-yun-xing-52msyun-xing-100nei-cun-100-by-l/
