@@ -36,7 +36,7 @@ nums 为无重复元素的升序排列数组
 题目要求使用时间复杂度为 O(log n) 的算法， 也就表明需要使用二分法。主要需要处理找不到元素的情况，一般二分搜索找不到返回-1，而此题需要我们返回查找元素的下标，即 left 或者 right + 1
 
 代码
-
+```ts
 function searchInsert(nums: number[], target: number): number {
   let left = 0, right = nums.length - 1
   while (left <= right) {
@@ -55,7 +55,7 @@ function searchInsert(nums: number[], target: number): number {
   // return (right + 1)
   return left
 };
-
+```
 作者：verten
 链接：https://leetcode-cn.com/problems/search-insert-position/solution/er-fen-sou-suo-zhu-yao-chu-li-dian-zai-y-r9wh/
 来源：力扣（LeetCode）
