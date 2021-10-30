@@ -60,7 +60,7 @@ var climbStairs = function(n) {
 
 同时需要初始化 dp[0]=1dp[0]=1 和 dp[1]=1dp[1]=1
 
-时间复杂度：O(n)O(n)
+时间复杂度：O(n)
 
 第二种思路代码
 ```js
